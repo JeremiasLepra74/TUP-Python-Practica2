@@ -2,6 +2,10 @@
 
 
 def maximo_basico(a: float, b: float) -> float:
+    if a > b:
+        return a
+    return b
+    
     """Toma dos números y devuelve el mayor.
 
     Restricciones:
@@ -24,9 +28,12 @@ def maximo_libreria(a: float, b: float) -> float:
     """Re-escribir utilizando el built-in max.
     Referencia: https://docs.python.org/3/library/functions.html#max
     """
+    return max(a, b)
 
 
 # NO MODIFICAR - INICIO
+print(maximo_libreria(10, 5)) == 10
+print(maximo_libreria(9, 18)) == 18
 assert maximo_libreria(10, 5) == 10
 assert maximo_libreria(9, 18) == 18
 # NO MODIFICAR - FIN
